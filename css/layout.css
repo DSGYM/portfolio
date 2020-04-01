@@ -1,0 +1,38 @@
+#navbar {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding: 1rem 1rem;
+  background-color: var(--bg-color);
+}
+
+#navbar ul li a {
+  padding: 1rem 0.5rem;
+  transition: all 0.25s ease-in;
+}
+
+#navbar ul li a:hover {
+  color: white;
+  background: var(--contrast);
+  border-radius: 5px;
+}
+
+#navbar > .logo span {
+  color: var(--contrast);
+}
+
+#navbar .bar {
+  display: flex;
+}
+
+#footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,105 @@
+/* Form styling */
+@import "./reset.css";
+@import "./utility.css";
+@import "./layout.css";
+
+#gridcontainer {
+  display: grid;
+  height: 100vh;
+  min-height: 100rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 70px 4fr 2fr 2fr 1fr 70px;
+  gap: 0.5rem;
+  grid-template-areas:
+    "nav"
+    "post1"
+    "post2"
+    "post3"
+    "newsletter"
+    "footer";
+}
+
+#post-1 {
+  grid-area: post1;
+  background-image: url("../images/mountain.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#post-2 {
+  grid-area: post2;
+  background-image: url("../images/hiking.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#post-3 {
+  grid-area: post3;
+  background-image: url("../images/hiking2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#newsletter {
+  grid-area: newsletter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  font-family: Arial;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.devider {
+  padding: 10px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* Footer */
+
+@media (min-width: 600px) {
+  #gridcontainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 3fr 3fr 1fr 70px;
+    gap: 0.5rem;
+    grid-template-areas:
+      "nav nav nav nav"
+      "post1 post1 post2 post2"
+      "post1 post1 post3 post3"
+      "newsletter newsletter newsletter newsletter"
+      "footer footer footer footer";
+  }
+}
+
+/* Card and Overlay */
+
+.card {
+  position: relative;
+}
+
+.card:hover > .overlay {
+  animation: bounceIn 0.5s linear forwards;
+}
+
+.card:hover {
+  filter: grayscale(70%);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 999;
+  padding: 2rem 2rem;
+  background: var(--bg-color);
+  opacity: 0;
+  border-radius: 0.5rem;
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+@import "./reset.css";
+@import "./utility.css";
+@import "./layout.css";
+
+#postcontainer {
+  display: grid;
+  height: 100vh;
+  min-height: 100rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 70px 1fr 1fr 70px;
+  gap: 0.5rem;
+  grid-template-areas:
+    "nav"
+    "img"
+    "description"
+    "footer";
+}
+
+.image {
+  grid-area: img;
+  background-image: url("../images/mountain.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  grid-area: description;
+  padding: 1rem 1rem 1rem 0.5rem;
+  text-align: center;
+}
+
+.content h3,
+.content p {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  #postcontainer {
+    display: grid;
+    height: 100vh;
+    min-height: 50rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 70px 1fr 70px;
+    gap: 0.5rem;
+    grid-template-areas:
+      "nav nav nav nav"
+      "img img description description"
+      "footer footer footer footer";
+  }
+}

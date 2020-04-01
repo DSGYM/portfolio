@@ -1,0 +1,71 @@
+/* From animate css */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+  color: var(--primary-color);
+  background: #fff;
+}
+
+.btn-back {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  border-radius: 0.5rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+.btn-back:hover {
+  color: var(--primary-color);
+  background: #fff;
+  border: 1px solid black;
+}
+
+input[type="text"],
+input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-top: 16px;
+}
+
+input[type="submit"] {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background: var(--contrast);
+}
